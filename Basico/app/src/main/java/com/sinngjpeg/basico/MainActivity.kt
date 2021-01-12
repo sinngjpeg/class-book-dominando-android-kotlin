@@ -5,22 +5,25 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.sinngjpeg.basico.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        val binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
 //      settando o layout
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
-        // criando variavel para receber os itens do layout
-        val editText = findViewById<EditText>(R.id.editText)
-        val button = findViewById<Button>(R.id.buttonToast)
+        //setta botao
+        val button = binding.buttonToast
 
 //      settando o botao para receber as informacoes inclusas no editText
-        button.setOnClickListener{
-            val text = editText.text.toString()
+        button.setOnClickListener {
+           val text = binding.editText.toString()
 //          Mostra uma mensagem Longa de 3,5 segundos com as informacoes que forao inclusas no text
-            Toast.makeText(this,text,Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
         }
     }
 }
