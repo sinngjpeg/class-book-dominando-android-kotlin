@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
 //      settando o botao para receber as informacoes inclusas no editText
         button.setOnClickListener {
-           val text = binding.editText.toString()
+           val text = binding.editText.text.toString()
 //          Mostra uma mensagem Longa de 3,5 segundos com as informacoes que forao inclusas no text
             Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
         }
