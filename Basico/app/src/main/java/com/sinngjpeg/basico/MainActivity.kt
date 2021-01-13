@@ -1,10 +1,10 @@
 package com.sinngjpeg.basico
 
-import androidx.appcompat.app.AppCompatActivity
+
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.sinngjpeg.basico.databinding.ActivityMainBinding
 
 
@@ -17,13 +17,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //setta botao
-        val button = binding.buttonToast
+        val buttonToast = binding.buttonToast
+        val buttonTela2 = binding.buttonTela2
 
 //      settando o botao para receber as informacoes inclusas no editText
-        button.setOnClickListener {
-           val text = binding.editText.text.toString()
+        buttonToast.setOnClickListener {
+            val text = binding.editText.text.toString()
 //          Mostra uma mensagem Longa de 3,5 segundos com as informacoes que forao inclusas no text
             Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+        }
+
+        buttonTela2.setOnClickListener {
+            val intent = Intent(this, Tela2Activity::class.java)
+            intent.putExtra("nome", "Glauber")
+            intent.putExtra("idade", 35)
+            startActivity(intent)
         }
     }
 }
