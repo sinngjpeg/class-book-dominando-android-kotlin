@@ -10,9 +10,9 @@ class MainActivity : AppCompatActivity() {
 
     var names = arrayListOf<String>()
     var adapter: ArrayAdapter<String>? = null
-    val list = android.R.layout.simple_list_item_1
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val list = android.R.layout.simple_list_item_1
         val binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
