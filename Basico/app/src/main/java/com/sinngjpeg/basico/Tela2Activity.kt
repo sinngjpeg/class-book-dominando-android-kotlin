@@ -29,10 +29,6 @@ class Tela2Activity : AppCompatActivity() {
         if (pessoa != null) {
             binding.textMensagem.text = "Nome: ${pessoa.nome} / Idade: ${pessoa.idade}"
         }
-
-
-
-
     }
 
     ///////////////////////////CICLO DE VIDA
