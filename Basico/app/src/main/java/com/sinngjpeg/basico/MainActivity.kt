@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
+
         //setta botao
         val buttonToast = binding.buttonToast
         val buttonTela2 = binding.buttonTela2

@@ -1,5 +1,6 @@
 package com.sinngjpeg.basico
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ class Tela2Activity : AppCompatActivity() {
         val binding = ActivityTela2Binding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        onConfigurationChanged(Configuration())
 
         val nome = intent.getStringExtra("nome")
         val idade = intent.getIntExtra("idade", -1)
