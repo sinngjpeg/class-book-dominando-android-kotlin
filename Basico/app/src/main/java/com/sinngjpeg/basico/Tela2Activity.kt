@@ -1,11 +1,10 @@
 package com.sinngjpeg.basico
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.sinngjpeg.basico.databinding.ActivityMainBinding
-import com.sinngjpeg.basico.databinding.ActivityMainBinding.inflate
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.sinngjpeg.basico.databinding.ActivityTela2Binding
-import com.sinngjpeg.basico.databinding.ActivityTela2Binding.inflate
+import org.parceler.Parcels
 
 class Tela2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,5 +29,41 @@ class Tela2Activity : AppCompatActivity() {
         if (pessoa != null) {
             binding.textMensagem.text = "Nome: ${pessoa.nome} / Idade: ${pessoa.idade}"
         }
+
+
+
+
+    }
+
+    ///////////////////////////CICLO DE VIDA
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("NGVL", "Tela2::onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("NGVL", "Tela2::onResume")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.i("NGVL", "Tela2::onRestart")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("NGVL", "Tela2::onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i("NGVL", "Tela2::onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("NGVL", "Tela2::onDestroy")
     }
 }
