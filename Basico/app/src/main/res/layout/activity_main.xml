@@ -38,7 +38,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/buttonToast"
-        app:layout_constraintTop_toBottomOf="@+id/buttonToast">
+        app:layout_constraintTop_toBottomOf="@+id/buttonToast"/>
 
-    </Button>
+    <Button
+        android:id="@+id/buttonParcel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="100dp"
+        android:text="@string/parcelable_via_intent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/buttonTela2" />
+
+    <Button
+        android:id="@+id/buttonSerializable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="100dp"
+        android:text="@string/serializable_via_intent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/buttonParcel" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

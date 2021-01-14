@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         //setta botao
         val buttonToast = binding.buttonToast
         val buttonTela2 = binding.buttonTela2
+        val buttonParcel = binding.buttonParcel
+        val buttonSerialazible = binding.buttonSerializable
 
 //      settando o botao para receber as informacoes inclusas no editText
         buttonToast.setOnClickListener {
@@ -31,6 +33,19 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Tela2Activity::class.java)
             intent.putExtra("nome", "Glauber")
             intent.putExtra("idade", 35)
+            startActivity(intent)
+        }
+
+        buttonParcel.setOnClickListener {
+            val cliente = Cliente(1, "Glauber")
+            val intent = Intent(this, Tela2Activity::class.java)
+            intent.putExtra("cliente", cliente)
+            startActivity(intent)
+        }
+
+        buttonSerialazible.setOnClickListener {
+            val intent = Intent(this, Tela2Activity::class.java)
+            intent.putExtra("pessoa", Pessoa("Nelson",35))
             startActivity(intent)
         }
     }

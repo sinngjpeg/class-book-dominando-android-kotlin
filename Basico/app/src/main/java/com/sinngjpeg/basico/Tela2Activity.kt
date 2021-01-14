@@ -15,7 +15,20 @@ class Tela2Activity : AppCompatActivity() {
 
         val nome = intent.getStringExtra("nome")
         val idade = intent.getIntExtra("idade", -1)
-
         binding.textMensagem.text = "Nome:$nome / Idade: $idade"
+
+
+        val cliente = intent.getParcelableExtra<Cliente>("cliente")
+        binding.textMensagem.text = if (cliente != null) {
+            "Nome: ${cliente.nome} / Código: ${cliente.codigo}"
+        } else {
+            "Nome: $nome / Idade: $idade"
+        }
+
+        val pessoa =
+            intent.getSerializableExtra("pessoa") as Pessoa? //o objeto pessoa pode ser nulo
+        if (pessoa != null) {
+            binding.textMensagem.text = "Nome: ${pessoa.nome} / Idade: ${pessoa.idade}"
+        }
     }
 }

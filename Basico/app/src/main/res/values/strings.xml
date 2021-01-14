@@ -4,4 +4,8 @@
     <string name="button">Button</string>
     <string name="digite_aqui">Digite aqui</string>
     <string name="tela_2">Tela 2</string>
+    <string name="parcelable_via_intent">Parcelable via Intent</string>
+    <string name="serializable_via_intent">Serializable via Intent</string>
+    <string name="tela2_texto1">Nome: %1$s / Código: %2$d</string>
+    <string name="tela2_texto2">Nome: %1$s / Idade: %2$d</string>
 </resources>
