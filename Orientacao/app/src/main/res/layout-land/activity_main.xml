@@ -23,9 +23,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAdd"
-        app:layout_constraintTop_toBottomOf="@+id/txtLabelName"
-        />
+        app:layout_constraintEnd_toStartOf="@+id/lstNames"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelName"/>
 
     <Button
         android:id="@+id/btnAdd"
@@ -33,17 +32,19 @@
         android:layout_height="wrap_content"
         android:onClick="btnAddClick"
         android:text="@string/btn_add"
-        app:layout_constraintBottom_toBottomOf="@+id/edtName"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtName"
+        />
 
-        <ListView
-            android:id="@+id/lstNames"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtName"
-            tools:listitem="@android:layout/simple_expandable_list_item_1"/>
+    <ListView
+        android:id="@+id/lstNames"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@android:layout/simple_expandable_list_item_1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
