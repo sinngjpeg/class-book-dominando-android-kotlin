@@ -11,13 +11,14 @@ import android.widget.ListView
 import com.sinngjpeg.activityresult.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    var state: String? = null
-    override fun onCreate(savedInstanceState: Bundle?) {
 
+    var state: String? = null
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-                binding.btnState.setOnClickListener {
+        binding.btnState.setOnClickListener {
             val intent = Intent(this, StatesListActivity::class.java)
             intent.putExtra(StatesListActivity.EXTRA_STATE, state)
             startActivityForResult(intent, REQUEST_STATE)
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_STATE) {
@@ -37,10 +39,12 @@ class MainActivity : AppCompatActivity() {
             button.text = state
         }
     }
+
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString(EXTRA_STATE, state)
     }
+
     companion object {
         private const val REQUEST_STATE = 1
         private const val EXTRA_STATE = "estado"
