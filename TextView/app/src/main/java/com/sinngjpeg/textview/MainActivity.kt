@@ -54,5 +54,5 @@ class MainActivity : AppCompatActivity() {
         } else
             Html.fromHtml(htmlText, imageGetter, null)
     }
-}
 
+}
