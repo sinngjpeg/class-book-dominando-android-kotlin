@@ -6,11 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.annotation.StringRes
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import kotlinx.android.synthetic.main.item_vehicle.view.*
 
 class VehicleAdapter(
@@ -33,14 +29,6 @@ class VehicleAdapter(
         row.txtFuel.text = ctx.getText(getFuel(vehicle))
         return row
     }
-//    companion object {
-//        data class ViewHolder(val view: View) {
-//            val imgLogo: ImageView = view.imgLogo
-//            val txtModel: TextView = view.txtModel
-//            val txtYear: TextView = view.txtYear
-//            val txtFuel: TextView = view.txtFuel
-//        }
-//    }
 
     @StringRes
     private fun getFuel(vehicle: Vehicle): Int =

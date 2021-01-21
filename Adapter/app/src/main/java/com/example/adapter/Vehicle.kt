@@ -1,7 +1,5 @@
 package com.example.adapter
 
-import java.util.*
-
 data class Vehicle(
     var model: String,
     var year: Int,

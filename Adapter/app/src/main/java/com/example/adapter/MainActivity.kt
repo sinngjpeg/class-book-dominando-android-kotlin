@@ -34,12 +34,13 @@ class MainActivity : AppCompatActivity() {
                 vehicles.remove(vehicle)
                 adapter.notifyDataSetChanged()
                 txtFooter.text = resources.getQuantityString(
-                    R.plurals.footer_text, adapter.count, adapter.count)
+                    R.plurals.footer_text, adapter.count, adapter.count
+                )
             }
         }
     }
 
-    private fun initHeaderAndFooter(listView : ListView, adapter: VehicleAdapter) {
+    private fun initHeaderAndFooter(listView: ListView, adapter: VehicleAdapter) {
         val padding = 8
         val txtHeader = TextView(this)
         txtHeader.setBackgroundColor(Color.GRAY)
@@ -50,7 +51,8 @@ class MainActivity : AppCompatActivity() {
 
         txtFooter = TextView(this)
         txtFooter.text = resources.getQuantityString(
-            R.plurals.footer_text, adapter.count, adapter.count)
+            R.plurals.footer_text, adapter.count, adapter.count
+        )
         txtFooter.setBackgroundColor(Color.LTGRAY)
         txtFooter.gravity = Gravity.END
         txtFooter.setPadding(0, padding, padding, padding)
