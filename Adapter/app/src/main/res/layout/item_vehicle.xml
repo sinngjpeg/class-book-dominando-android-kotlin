@@ -39,5 +39,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtYear"
         tools:text="Gasolina/Etanol" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
