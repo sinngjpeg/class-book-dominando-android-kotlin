@@ -6,12 +6,9 @@ plugins {
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
-    buildFeatures {
-        viewBinding true
-    }
 
     defaultConfig {
-        applicationId "com.example.recycler"
+        applicationId "com.example.livros"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -45,6 +42,4 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation "androidx.recyclerview:recyclerview:1.1.0"
-    implementation "androidx.recyclerview:recyclerview-selection:1.1.0-rc03"
 }
