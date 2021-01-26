@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         val settings = webView.settings
         settings.javaScriptEnabled = true
         webView.addJavascriptInterface(this, "dominando")
-        webView.loadUrl("file:///android_assets/app_page.html")
+        webView.loadUrl("file:///android_asset/app_page.html")
     }
 
     @JavascriptInterface
