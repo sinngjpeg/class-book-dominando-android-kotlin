@@ -1,7 +1,13 @@
 package com.example.webview
 
+import android.annotation.TargetApi
+import android.graphics.Bitmap
+import android.os.Build
 import android.os.Bundle
 import android.webkit.JavascriptInterface
+import android.webkit.WebResourceRequest
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
