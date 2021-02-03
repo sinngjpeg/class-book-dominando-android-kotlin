@@ -8,7 +8,7 @@ class HotelListPresenter(
 ) {
     fun searchHotels(term: String) {
         repository.search(term) { hotels ->
-            view.showHotels(hotels)
+            hotels?.let { view.showHotels(it) }
         }
     }
 
