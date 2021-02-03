@@ -39,7 +39,7 @@ object MemoryRepository : HotelRepository {
         callback(hotelsList.find { it.id == id })
     }
 
-    override fun search(term: String, callback: (List<Hotel>) -> Unit) {
+    override fun search(term: String, callback: (List<Hotel>?) -> Unit) {
         val resultList =
             if (term.isEmpty()) hotelsList
             else hotelsList.filter {
