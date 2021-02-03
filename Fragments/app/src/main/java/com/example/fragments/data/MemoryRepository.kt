@@ -1,6 +1,4 @@
-package com.example.fragments
-
-import com.example.fragments.data.Hotel
+package com.example.fragments.data
 
 object MemoryRepository : HotelRepository {
     private var nextId = 1L

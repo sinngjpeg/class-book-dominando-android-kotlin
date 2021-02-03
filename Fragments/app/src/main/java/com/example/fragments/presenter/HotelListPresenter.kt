@@ -1,6 +1,8 @@
-package com.example.fragments
+package com.example.fragments.presenter
 
+import com.example.fragments.data.HotelListView
 import com.example.fragments.data.Hotel
+import com.example.fragments.data.HotelRepository
 
 class HotelListPresenter(
     private val view: HotelListView,

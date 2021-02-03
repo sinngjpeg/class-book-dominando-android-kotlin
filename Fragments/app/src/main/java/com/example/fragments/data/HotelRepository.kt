@@ -1,4 +1,4 @@
-package com.example.fragments
+package com.example.fragments.data
 
 import com.example.fragments.data.Hotel
 

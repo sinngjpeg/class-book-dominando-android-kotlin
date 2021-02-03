@@ -1,8 +1,8 @@
-package com.example.fragments
+package com.example.fragments.presenter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.fragments.databinding.ActivityHotelBinding
+import com.example.fragments.R
 
 class HotelActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,17 +1,12 @@
-package com.example.fragments
+package com.example.fragments.presenter
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.ListView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.view.ActionMode
 import androidx.fragment.app.ListFragment
 import com.example.fragments.data.Hotel
-import com.google.android.material.snackbar.Snackbar
+import com.example.fragments.data.HotelListView
+import com.example.fragments.data.MemoryRepository
+import com.example.fragments.presenter.HotelListPresenter
 
 class HotelListFragment : ListFragment(), HotelListView {
     private val presenter = HotelListPresenter(this, MemoryRepository)
