@@ -10,7 +10,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome" />
+            android:text="@string/nome" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -24,16 +24,16 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Avisos por:" />
+            android:text="@string/avisos_por" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Telefone" />
+            android:text="@string/telefone" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email" />
+            android:text="@string/email" />
     </TableRow>
 </TableLayout>

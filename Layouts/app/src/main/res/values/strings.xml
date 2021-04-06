@@ -12,4 +12,18 @@
     <string name="botao_um">Um</string>
     <string name="botao_exemplo">Exemplo</string>
     <string name="botao_peso">de peso</string>
+    <string name="avisos_por">Avisos por:</string>
+    <string name="telefone">Telefone</string>
+    <string name="email">Email</string>
+    <string name="nome">Nome</string>
+    <string name="botao_1">Botao 1</string>
+    <string name="botao_2">Botao 2</string>
+    <string name="botao_3">Botao 3</string>
+    <string name="botao_4">Botao 4</string>
+    <string name="botao_5">Botao 5</string>
+    <string name="botao_6">Botao 6</string>
+    <string name="button">Button</string>
+    <string name="butoon_a">A</string>
+    <string name="button_b">B</string>
+    <string name="button_c">C</string>
 </resources>
