@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Layouts</string>
+    <string name="primeiro_botao">Primeiro</string>
+    <string name="segundo_botao">Segundo Botao</string>
+    <string name="terceiro_botao">Terceiro</string>
+    <string name="quarto_botao">Quarto</string>
+    <string name="margin">Margin</string>
+    <string name="padding">Padding</string>
 </resources>

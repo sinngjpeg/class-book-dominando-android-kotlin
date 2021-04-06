@@ -9,12 +9,12 @@
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
         android:background="#00FF00"
-        android:text="Margin" />
+        android:text="@string/margin" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00FF00"
         android:padding="40dp"
-        android:text="Padding" />
+        android:text="@string/padding" />
 </LinearLayout>
