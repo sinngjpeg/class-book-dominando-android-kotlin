@@ -6,4 +6,10 @@
     <string name="quarto_botao">Quarto</string>
     <string name="margin">Margin</string>
     <string name="padding">Padding</string>
+    <string name="recife_pe">Recife-PE</string>
+    <string name="titulo">Titulo</string>
+    <string name="subtitulo">Subtitulo</string>
+    <string name="botao_um">Um</string>
+    <string name="botao_exemplo">Exemplo</string>
+    <string name="botao_peso">de peso</string>
 </resources>

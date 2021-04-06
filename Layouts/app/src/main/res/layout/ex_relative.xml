@@ -27,7 +27,7 @@
         android:layout_alignParentTop="true"
         android:layout_toStartOf="@+id/chkEnable"
         android:layout_toEndOf="@+id/imgIcone"
-        android:text="Titulo"></TextView>
+        android:text="@string/titulo"></TextView>
 
     <TextView
         android:id="@+id/txtSubtitulo"
@@ -35,6 +35,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtTitulo"
         android:layout_toEndOf="@+id/imgIcone"
-        android:text="Subtitulo"></TextView>
+        android:text="@string/subtitulo"></TextView>
 
 </RelativeLayout>

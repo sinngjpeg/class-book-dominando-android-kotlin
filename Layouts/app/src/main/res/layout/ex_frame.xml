@@ -15,7 +15,7 @@
         android:layout_gravity="bottom"
         android:background="#FFFFFF"
         android:padding="10dp"
-        android:text="Recife-PE"></TextView>
+        android:text="@string/recife_pe"></TextView>
 
     <ImageView
         android:layout_width="wrap_content"
