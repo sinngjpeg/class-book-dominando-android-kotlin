@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 //      settando o layout
         setContentView(binding.root)
+//        Informa a orientação da tela
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
 
