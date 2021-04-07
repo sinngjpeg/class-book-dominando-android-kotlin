@@ -10,56 +10,57 @@
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:accessibilityTraversalAfter="@id/buttonToast"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/digite_aqui"
         android:inputType="textPersonName"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonToast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="12dp"
-        android:accessibilityTraversalAfter="@id/editText"
-        android:text="@string/button"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <Button
-        android:text="@string/tela_2"
-        android:id="@+id/buttonTela2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/buttonToast"
-        app:layout_constraintTop_toBottomOf="@+id/buttonToast"/>
-
-    <Button
-        android:id="@+id/buttonParcel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="100dp"
-        android:text="@string/parcelable_via_intent"
-        app:layout_constraintRight_toRightOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/buttonTela2" />
 
     <Button
         android:id="@+id/buttonSerializable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="100dp"
         android:text="@string/serializable_via_intent"
         app:layout_constraintRight_toRightOf="parent"
-
+        app:layout_constraintStart_toStartOf="@+id/buttonParcel"
         app:layout_constraintTop_toBottomOf="@+id/buttonParcel" />
 
+    <Button
+        android:id="@+id/buttonTela2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tela_2"
+        app:layout_constraintStart_toStartOf="@+id/buttonToast"
+        app:layout_constraintTop_toBottomOf="@+id/buttonToast" />
+
+    <Button
+        android:id="@+id/buttonParcel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/parcelable_via_intent"
+        app:layout_constraintStart_toStartOf="@+id/buttonTela2"
+        app:layout_constraintTop_toBottomOf="@id/buttonTela2" />
+
+    <Button
+        android:id="@+id/buttonToast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:accessibilityTraversalAfter="@id/editText"
+        android:text="@string/button"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

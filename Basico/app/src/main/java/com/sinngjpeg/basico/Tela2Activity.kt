@@ -15,9 +15,9 @@ class Tela2Activity : AppCompatActivity() {
         onConfigurationChanged(Configuration())
 
         val nome = intent.getStringExtra("nome")
+        //caso idade nao seja definido ele sera informado como -1
         val idade = intent.getIntExtra("idade", -1)
         binding.textMensagem.text = "Nome:$nome / Idade: $idade"
-
 
         val cliente = intent.getParcelableExtra<Cliente>("cliente")
         binding.textMensagem.text = if (cliente != null) {
