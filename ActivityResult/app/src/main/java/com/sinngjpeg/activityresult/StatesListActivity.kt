@@ -13,11 +13,16 @@ class StatesListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val listView = ListView(this)
         setContentView(listView)
+
         val statesList = resources.getStringArray(R.array.states)
-        val listAdapter = ArrayAdapter(this,
-            android.R.layout.simple_list_item_single_choice, statesList)
+        val listAdapter = ArrayAdapter(
+            this,
+            android.R.layout.simple_list_item_single_choice, statesList
+        )
+
         listView.adapter = listAdapter
         listView.choiceMode = AbsListView.CHOICE_MODE_SINGLE
+
         val state = intent.getStringExtra(EXTRA_STATE)
         if (state != null) {
             val position = statesList.indexOf(state)
@@ -31,6 +36,7 @@ class StatesListActivity : AppCompatActivity() {
             finish()
         }
     }
+
     companion object {
         const val EXTRA_STATE = "estado"
         const val EXTRA_RESULT = "result"
