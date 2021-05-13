@@ -9,9 +9,11 @@ import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import com.example.edittext.databinding.ActivityMainBinding
 
+private lateinit var binding: ActivityMainBinding
+
 class MainActivity : AppCompatActivity() {
-    val binding = ActivityMainBinding.inflate(layoutInflater)
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
@@ -21,30 +23,36 @@ class MainActivity : AppCompatActivity() {
             }
             false
         }
+
         binding.edtCep.addTextChangedListener(object : TextWatcher {
             var isUpdating = false
-            override fun afterTextChanged(s: Editable?) {
-            }
 
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
+            override fun afterTextChanged(s: Editable?) {}
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
                 // Quando o texto é alterado o onTextChange é chamado
                 // Essa flag evita a chamada infinita desse método
+
                 if (isUpdating) {
                     isUpdating = false
                     return
                 }
+
                 // Ao apagar o texto, a máscara é removida, então o posicionamento
                 // do cursor precisa saber se o texto atual tinha ou não máscara
+
                 val hasMask = s.toString().indexOf('.') > -1 ||
                         s.toString().indexOf('-') > -1
                 // Remove o '.' e '-' da String
+
                 var str = s.toString().filterNot { it == '.' || it == '-' }
+
                 // Os parâmetros before e count dizem o tamanho
                 // anterior e atual da String digitada, se count > before é
                 // porque está digitando, caso contrário, está apagando
+
                 if (count > before) {
                     if (str.length > 5) {
                         // Se tem mais de 5 caracteres (sem máscara) coloca o '.' e o '-'

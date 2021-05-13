@@ -1,10 +1,11 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -15,8 +16,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/hint_name"
             android:imeOptions="actionNext"
-            android:inputType="textPersonName|textCapWords"/>
+            android:inputType="textPersonName|textCapWords" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilEmail"
         android:layout_width="match_parent"
@@ -28,8 +30,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/hint_email"
             android:imeOptions="actionNext"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -40,8 +43,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/hint_cep"
             android:inputType="number"
-            android:maxLength="10"/>
+            android:maxLength="10" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilPassword"
         android:layout_width="match_parent"
@@ -53,6 +57,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/hint_password"
             android:imeOptions="actionDone"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            app:endIconMode="password_toggle" />
     </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>
