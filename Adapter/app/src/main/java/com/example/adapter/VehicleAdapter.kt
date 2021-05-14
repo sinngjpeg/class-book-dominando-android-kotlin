@@ -6,7 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.annotation.StringRes
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_vehicle.view.*
 
 class VehicleAdapter(
@@ -22,12 +25,31 @@ class VehicleAdapter(
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val vehicle = vehicles[position]
-        val row = LayoutInflater.from(ctx).inflate(R.layout.item_vehicle, parent, false)
+        val holder: ViewHolder
+        val row: View
+        if (convertView == null) {
+            row = LayoutInflater.from(ctx).inflate(R.layout.item_vehicle, parent, false)
+            holder = ViewHolder(row)
+            row.tag = holder
+        } else {
+            row = convertView
+            holder = convertView.tag as ViewHolder
+        }
+
         row.imgLogo.setImageDrawable(logos.getDrawable(vehicle.manufacturer))
         row.txtModel.text = vehicle.model
         row.txtYear.text = vehicle.year.toString()
         row.txtFuel.text = ctx.getText(getFuel(vehicle))
         return row
+    }
+
+    companion object {
+        data class ViewHolder(val view: View) {
+            val imgLogo: ImageView = view.imgLogo
+            val txtModel: TextView = view.txtModel
+            val txtYear: TextView = view.txtYear
+            val txtFuel: TextView = view.txtFuel
+        }
     }
 
     @StringRes
